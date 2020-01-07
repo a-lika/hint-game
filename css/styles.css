@@ -84,6 +84,17 @@ h1.logo {
   border-radius: 15px;
   outline: 0;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.manage-game:hover {
+  background-image: linear-gradient(
+    to top,
+    rgb(147, 201, 201) 0%,
+    rgb(88, 189, 189) 40%,
+    rgb(88, 189, 189) 60%,
+    rgb(147, 201, 201) 100%
+  );
 }
 
 .options,
@@ -152,6 +163,7 @@ img.rules-img {
   border-radius: 5px;
   margin: 0 1% 2%;
   padding: 0;
+  user-select: none;
 }
 
 .item-with-hint {
@@ -170,6 +182,7 @@ img.rules-img {
   background-size: contain;
   background-repeat: no-repeat;
   font-size: 0;
+  user-select: none;
 }
 
 .item-hint {
@@ -182,6 +195,10 @@ img.rules-img {
   user-select: none;
 }
 
+img.item-hint:hover {
+  filter: contrast(200%);
+}
+
 input.item-name {
   width: 150px;
   padding: 5px 9px;
@@ -192,10 +209,12 @@ input.item-name {
   text-align: left;
   outline: none;
   border: none;
+  user-select: none;
 }
 
 input.item-name:disabled {
   border: none;
+  user-select: none;
 }
 
 .draggable-area {
@@ -343,7 +362,6 @@ span.right-answers {
 }
 
 .right {
-  /* background: rgb(135, 196, 135); */
   background: rgb(192, 221, 184);
 }
 
@@ -422,14 +440,13 @@ span.right-answers {
 
 .modal-close:hover {
   background: rgb(250, 194, 60);
-  /* color: rgb(250, 194, 60); */
   text-decoration: none;
   cursor: pointer;
 }
 
 .modal-header {
-  background: #244747; /* #183030; */
-  color: #ffffff; /*rgb(250, 194, 60);  rgb(147, 201, 201); */
+  background: #244747;
+  color: #ffffff;
   padding: 10px;
 }
 

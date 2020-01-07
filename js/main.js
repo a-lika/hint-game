@@ -92,6 +92,18 @@ window.addEventListener(
         this.hint.src = "images/hint.png";
         this.item.appendChild(this.hint);
         this.item.classList.add("item-with-hint");
+
+        $(".item-image").attr({
+          ondrag: "return false",
+          ondragdrop: "return false",
+          ondragstart: "return false"
+        });
+
+        $(".item-hint").attr({
+          ondrag: "return false",
+          ondragdrop: "return false",
+          ondragstart: "return false"
+        });
       }
 
       this.item.appendChild(this.itemImage);
